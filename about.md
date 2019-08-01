@@ -1,20 +1,14 @@
 ---
 title: About Me
-subtitle: This is a short page about me and my work.
+subtitle: ''
 img_path: images/about.jpg
-menus:
+layout: page
+menu:
   main:
     title: About
     weight: 4
-layout: page
+
 ---
+I am a software developer currently living in Lincoln, Nebraska with a passion for continually growing in the craft of software development. I have a broad set of experience in embedded C, Python and .NET.
 
-**John Doe** is a Senior Art Director from [Stockholm](https://en.wikipedia.org/wiki/Stockholm), Sweden. After graduating from The College of Visual Arts with a degree in Communication Design, he worked for three small graphic design shops where he honed his design style and sensibility.
-
-His work has been recognized by Communication Arts, Print, How, ID, IdN, AIGA, Effie, Archive, Graphis, AdFed and Rockport. Graphic Design USA named him a person to watch in 2019.
-
->The world always seems brighter when you’ve just made something that wasn’t there before. <cite>Neil Gaiman</cite>
-
-As a hobby, John Doe authors the most influential design blog in Sweden with over 100,000 page views a month. He lives in Stockholm with his beautiful wife and two boys.
-
-*Thank You for reading!*
+When I am away from the keyboard, I love to run, hike, and climb. 
