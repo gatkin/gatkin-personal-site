@@ -37,4 +37,5 @@ fields:
   config:
     required: true
 pages:
+- _posts/writing-maintainable-tests.md
 - _posts/2018-11-25-the-python-packages-i-use-in-nearly-every-project.md
