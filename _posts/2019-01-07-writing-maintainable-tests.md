@@ -5,8 +5,8 @@ subtitle: ''
 date: 2019-01-07 00:00:00 +0000
 thumb_img_path: ''
 content_img_path: ''
-excerpt: I recently read *[XUnit Test Patterns](http://xunitpatterns.com/index.html)*
-  by Gerard Meszaros, and it has changed how I approach writing test code.
+excerpt: I recently read XUnit Test Patterns by Gerard Meszaros, and it has changed
+  how I approach writing test code.
 
 ---
 I recently read *[XUnit Test Patterns](http://xunitpatterns.com/index.html)* by Gerard Meszaros, and it has changed how I approach writing test code. When I initially began writing unit tests, I focused primarily on ensuring my production code was was well-written, maintainable, and testable. Because I did not give any special consideration towards the maintainability of the test code itself, some of the unit tests I wrote turned out to be a burden when making later changes.
