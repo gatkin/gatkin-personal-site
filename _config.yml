@@ -7,7 +7,7 @@ palette: green
 header:
   title: ''
   tagline: ''
-  profile_img: images/avatar.png
+  profile_img: "/images/7703602 10.08.53 AM.jpg"
   bg: dark
   has_nav: true
   has_social: true
