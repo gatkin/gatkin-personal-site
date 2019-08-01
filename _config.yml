@@ -8,7 +8,7 @@ header:
   title: ''
   tagline: ''
   profile_img: "/images/7703602 10.08.53 AM.jpg"
-  bg: dark
+  bg: light
   has_nav: true
   has_social: true
 footer:
