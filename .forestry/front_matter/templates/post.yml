@@ -37,5 +37,5 @@ fields:
   config:
     required: true
 pages:
-- _posts/structuring-sqlite-code-in-c.md
 - _posts/organizing-c-code.md
+- _posts/structuring-sqlite-code-in-c.md
