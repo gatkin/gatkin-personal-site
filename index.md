@@ -7,16 +7,8 @@ sections:
   component: hero_block.html
   content: Welcome to my personal site where I write about my journey as a software
     developer.
-  title: ''
+  title: Greg Atkin
   actions: []
-- type: contentblock
-  template: contentblock
-  title: About
-  section_id: about
-  actions: []
-  component: content_block.html
-  content: 'Welcome to '
-  image: ''
 - type: postsblock
   template: postsblock
   title: Recent Posts
