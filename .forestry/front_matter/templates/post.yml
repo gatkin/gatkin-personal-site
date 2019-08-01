@@ -36,5 +36,3 @@ fields:
   default: post
   config:
     required: true
-pages:
-- _posts/2018-01-23-2018-01-23-the-ride-in-the-woods.md
