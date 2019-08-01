@@ -2,53 +2,67 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: admin
-webhook_url: 'https://api.stackbit.com/project/5d4230ebc7018500137f209d/webhook/forestry'
+webhook_url: https://api.stackbit.com/project/5d4230ebc7018500137f209d/webhook/forestry
 sections:
-  - type: document
-    label: Global Site Config
-    path: _config.yml
-    templates:
-      - config
-  - type: document
-    label: Social Links
-    path: _data/social.json
-    templates:
-      - social
-  - type: document
-    label: Author
-    path: _data/author.json
-    templates:
-      - author
-  - type: document
-    label: Home
-    path: index.md
-    templates:
-      - home
-  - type: document
-    label: Blog
-    path: blog/index.md
-    templates:
-      - blog
-  - type: document
-    label: Contact
-    path: contact.md
-    templates:
-      - contact
-  - type: directory
-    path: ''
-    match: '**/*.md'
-    exclude: '{_posts/**,README.md,LICENSE.md,index.md,blog/index.md,contact.md}'
-    label: Page
-    create: all
-    templates:
-      - page
-  - type: jekyll-posts
-    label: Post
-    create: all
-    templates:
-      - post
+- type: document
+  path: _config.yml
+  label: Global Site Config
+  templates:
+  - config
+- type: document
+  path: _data/social.json
+  label: Social Links
+  templates:
+  - social
+- type: document
+  path: _data/author.json
+  label: Author
+  templates:
+  - author
+- type: document
+  path: index.md
+  label: Home
+  templates:
+  - home
+- type: document
+  path: blog/index.md
+  label: Blog
+  templates:
+  - blog
+- type: document
+  path: contact.md
+  label: Contact
+  templates:
+  - contact
+- type: directory
+  path: ''
+  label: Page
+  create: all
+  match: "**/*.md"
+  exclude: "{_posts/**,README.md,LICENSE.md,index.md,blog/index.md,contact.md}"
+  templates:
+  - page
+- type: jekyll-posts
+  label: Post
+  create: all
+  templates:
+  - post
 upload_dir: images
-public_path: /images
+public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ':filename:'
+file_template: ":filename:"
+build:
+  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
+  publish_command: bundle exec jekyll build -d _site
+  preview_env:
+  - JEKYLL_ENV=staging
+  publish_env:
+  - JEKYLL_ENV=production
+  preview_output_directory: _site
+  output_directory: _site
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+    --port 8080 --host 0.0.0.0 -d _site
+  install_dependencies_command: bundle install --path vendor/bundle
+  preview_docker_image: forestryio/ruby:2.6
+  mount_path: "/srv"
