@@ -1,0 +1,151 @@
+---
+label: Global Site Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: text
+    name: baseurl
+    label: Base URL
+    description: Serve the website from the given base URL
+    hidden: true
+  - type: text
+    name: permalink
+    label: Permalink
+    description: 'The output path for your pages, posts, or collections.'
+    hidden: true
+    default: '/posts/:slug:output_ext'
+  - type: select
+    name: layout_style
+    label: Layout Style
+    description: The style of the theme layout.
+    default: default
+    config:
+      source:
+        type: custom
+      options:
+        - default
+        - overflow
+  - type: select
+    name: palette
+    label: Color Palette
+    description: The color palette of the theme.
+    default: green
+    config:
+      source:
+        type: custom
+      options:
+        - green
+        - blue
+        - violet
+        - orange
+  - type: field_group
+    name: header
+    label: Header Configuration
+    fields:
+      - type: text
+        name: title
+        label: Header Title
+        description: >-
+          The title displayed on the left side. If value is not set, the author
+          name will be used.
+      - type: text
+        name: tagline
+        label: Header Tagline
+        description: The tagline displayed on the left side.
+      - type: file
+        name: profile_img
+        label: Profile Image
+        description: >-
+          The author profile image displayed on the left side. If value is not
+          set, the author avatar will be used.
+      - type: select
+        name: bg
+        label: Header Background
+        description: The background of the left side.
+        default: light
+        config:
+          source:
+            type: custom
+          options:
+            - light
+            - dark
+      - type: boolean
+        name: has_nav
+        label: Enable Navigation Menu
+        description: Display the navigation menu bar on the left side.
+        default: true
+      - type: boolean
+        name: has_social
+        label: Enable Social Links
+        description: Display social links on the left side.
+        default: true
+  - type: field_group
+    name: footer
+    label: Footer Configuration
+    fields:
+      - type: text
+        name: content
+        label: Footer Content
+        description: The copyright text displayed in the footer.
+      - type: field_group_list
+        name: links
+        label: Links
+        description: A list of links displayed in the footer.
+        config:
+          labelField: text
+        fields:
+          - type: text
+            name: text
+            label: Link text
+          - type: text
+            name: url
+            label: URL
+          - type: boolean
+            name: new_window
+            label: Open in new window
+            default: true
+  - type: field_group
+    name: sass
+    label: Sass
+    hidden: true
+    fields:
+      - type: number
+        name: indentWidth
+        label: Indent Width
+        description: >-
+          Used to determine the number of spaces or tabs to be used for
+          indentation.
+        default: 4
+      - type: select
+        name: style
+        label: Output Style
+        description: Determines the output format of the final CSS style.
+        default: nested
+        config:
+          source:
+            type: custom
+          options:
+            - nested
+            - expanded
+            - compact
+            - compressed
+      - type: number
+        name: precision
+        label: Precision
+        description: Used to determine how many digits after the decimal will be allowed.
+        default: 10
+  - type: list
+    name: plugins
+    label: Plugins
+    hidden: true
+  - type: list
+    name: exclude
+    label: Exclude
+    description: Exclude directories and/or files from the conversion.
+    hidden: true
