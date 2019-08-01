@@ -36,3 +36,5 @@ fields:
   default: post
   config:
     required: true
+pages:
+- _posts/organizing-c-code.md
