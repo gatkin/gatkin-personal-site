@@ -5,9 +5,8 @@ sections:
   template: heroblock
   section_id: hero
   component: hero_block.html
-  content: Welcome to my personal site where I write about my journey as a software
-    developer.
-  title: Greg Atkin
+  content: I write about code. And stuff.
+  title: Code 'n Stuff
   actions: []
 - type: postsblock
   template: postsblock

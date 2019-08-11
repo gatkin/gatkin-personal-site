@@ -5,13 +5,15 @@ subtitle: ''
 date: 2019-08-03 06:00:00 +0000
 thumb_img_path: ''
 content_img_path: ''
-excerpt: I have found setup for automating the process of releasing to PyPI using Azure Pipelines that makes the publishing a package to PyPI as simple as creating a new git tag.
+excerpt: I have found a setup for automating the process of releasing to PyPI using Azure Pipelines that makes publishing a package to PyPI as simple as creating a new git tag.
 
 ---
 
-Publishing Python packages to PyPI can sometimes be difficult. After publishing a few of my own Python packages to PyPI, I have found setup for automating the process of releasing to PyPI using Azure Pipelines that makes the publishing a package to PyPI as simple as creating a new git tag.
+Publishing Python packages to PyPI can sometimes be difficult. After publishing a few of my own Python packages to PyPI, I have found a setup for automating the process of releasing to PyPI using Azure Pipelines that makes publishing a package to PyPI as simple as creating a new git tag.
 
 While this walkthrough uses Azure Pipelines, this setup can be modified to work on your CI provider of choice.
+
+An example repository which implements this setup can be found at [https://github.com/gatkin/automated-pypi-deploy-example](https://github.com/gatkin/automated-pypi-deploy-example).
 
 ## Project Setup
 
