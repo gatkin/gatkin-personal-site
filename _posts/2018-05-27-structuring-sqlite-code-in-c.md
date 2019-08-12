@@ -11,7 +11,7 @@ excerpt: In this post, I describe an approach to structuring C SQLite access cod
 
 ---
 
-As one of the most widely deployed software libraries in the world, SQLite is used in many contexts from small embedded systems to smartphones to web browsers. As a self-contained C library, SQLite is particularly useful as a persistent data management solution for embedded C applications. However, working with SQLite in C requires quite a lot of boilerplate SQL access code. Managing data sets of any complexity with SQLite in C can very quickly lead to a mess of spaghetti code. In this post, I describe an approach to structuring C SQLite access code that I have found a very useful to producing code that is easy to understand, maintain, and test.
+As one of the most widely deployed software libraries in the world, SQLite is used in many contexts from small embedded systems to smartphones to web browsers. As a self-contained C library, SQLite is particularly useful as a persistent data management solution for embedded C applications. However, working with SQLite in C requires quite a lot of boilerplate SQL access code. Managing data sets of any complexity with SQLite in C can very quickly lead to a mess of spaghetti code. In this post, I describe an approach to structuring C SQLite access code that I have found a very useful for producing code that is easy to understand, maintain, and test.
 
 ## Concerns in SQLite Access Code
 
@@ -49,7 +49,7 @@ To make SQLite access code more understandable, maintainable, and testable, I fi
 2. **Business logic** for managing, validating, and ensuring consistency of the data in the SQLite database. This code should be cleanly separated from the raw SQLite access code so that code authors and readers can focus on the important business logic rather than on the low-level details of accessing the SQLite APIs. It is also very important to unit test this code.
 3. **Transaction and concurrency management** contains all of the hard-to-unit-test code and should be separated from the raw SQLite access code and the business logic so that those components can be easily tested.
 
-These three areas of concerns nicely produce three distinct layers for SQLite management code which, from lowest level to highest level, I call
+These three areas of concerns nicely produce three distinct layers for SQLite management code which, from the lowest level to the highest level, I call
 
 1. **Accessor layer**
    - Contains all raw SQLite access code.

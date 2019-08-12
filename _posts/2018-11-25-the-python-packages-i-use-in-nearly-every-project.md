@@ -32,7 +32,7 @@ My experience with testing in Python projects has been an absolute joy, largely 
 
 ### pytest
 
-[Pytest](https://docs.pytest.org/en/latest/) is hands-down my favorite testing framework I have every worked with in any language. I particularly love the simplicity of the assertion introspection feature it provides. All you need is the `assert` keyword and pytest handles generating the output necessary for diagnosing any test failures no matter the complexity of the values being compared in the assert statement.
+[Pytest](https://docs.pytest.org/en/latest/) is hands-down my favorite testing framework I have ever worked with in any language. I particularly love the simplicity of the assertion introspection feature it provides. All you need is the `assert` keyword and pytest handles generating the output necessary for diagnosing any test failures no matter the complexity of the values being compared in the assert statement.
 
 {% gist 612f95668b3ab93b6dc5389c09e479a8 %}
 
@@ -42,7 +42,7 @@ In addition, the auto-discovery and test fixture features provided by pytest hel
 
 ### coverage.py
 
-For measuring code coverage in Python, [coverage.py](https://coverage.readthedocs.io/en/latest/) is my go-to solution. It is simple to integrate with pytest tests and produces nice coverage reports in both terminal and HTML formats. coverage.py can also measure branch coverage and allows you to fail builds that fall under a minimum coverage treshold.
+For measuring code coverage in Python, [coverage.py](https://coverage.readthedocs.io/en/latest/) is my go-to solution. It is simple to integrate with pytest tests and produces nice coverage reports in both terminal and HTML formats. coverage.py can also measure branch coverage and allows you to fail builds that fall under a minimum coverage threshold.
 
 ### Other Testing Packages
 
@@ -72,7 +72,7 @@ I usually use both flake8 and pylint together in projects since they flag non-ov
 
 {% gist 07dc29e6cf40919d1fcf36c51f66a73f %}
 
-While adding static types to my Python code has caught a few errors, I find that static typing provides the most value as a form of machine-checked documentation that you know is always up to date. Since mypy supports, gradual typing, you do not have to annotate everything in the project to gain a lot of value. I find  that adding type annotations around the core data types and key functions in my project goes a long way towards improving understandability and maintainability particularly as the project grows in size.
+While adding static types to my Python code has caught a few errors, I find that static typing provides the most value as a form of machine-checked documentation that you know is always up to date. Since mypy supports, gradual typing, you do not have to annotate everything in the project to gain a lot of value. I find  that adding type annotations around the core data types and key functions in my project goes a long way towards improving understandability and maintainability, particularly as the project grows in size.
 
 Facebook has also open sourced a static type checker for Python called [Pyre](https://pyre-check.org/) which I have not used before but looks to support many of the same features as mypy.
 

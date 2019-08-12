@@ -9,7 +9,7 @@ excerpt: I recently read XUnit Test Patterns by Gerard Meszaros, and it has chan
   how I approach writing test code.
 
 ---
-I recently read *[XUnit Test Patterns](http://xunitpatterns.com/index.html)* by Gerard Meszaros, and it has changed how I approach writing test code. When I initially began writing unit tests, I focused primarily on ensuring my production code was was well-written, maintainable, and testable. Because I did not give any special consideration towards the maintainability of the test code itself, some of the unit tests I wrote turned out to be a burden when making later changes.
+I recently read *[XUnit Test Patterns](http://xunitpatterns.com/index.html)* by Gerard Meszaros, and it has changed how I approach writing test code. When I initially began writing unit tests, I focused primarily on ensuring my production code was well-written, maintainable, and testable. Because I did not give any special consideration towards the maintainability of the test code itself, some of the unit tests I wrote turned out to be a burden when making later changes.
 
 The key principle for writing maintainable test code that I took away from *XUnit Test Patterns* is to **minimize the dependency of the test code on the system under test (SUT)**. All information about the SUT that is irrelevant to a test case should be kept out of the test. Every piece of knowledge that a test contains about the SUT is an additional coupling point between the test and the SUT. The more coupling points a test case has to the SUT, the more likely that a change to the SUT will require a corresponding change to the test, thereby increasing the maintenance burden. A test case should specify only the absolute minimum necessary amount of information about the SUT required to perform the test and no more.
 
@@ -25,7 +25,7 @@ For instance, consider the consequences if we needed to make a change to record 
 
 ## Creation Methods
 
-In the arrange step of a test, we often need to create objects to be used in the test. The process of creating such objects may involve many steps or require a lot of information that is irrelevant the test. Creation methods encapsulate the logic for creating objects for use in test cases. Creation methods allow test cases to supply only the information relevant to the test case and provide defaults for all other values required to create an object. Creation methods can be reused by many test cases. If changes are made to the SUT which affect how an object is constructed, then only a handful of creation methods need to be updated rather than many dozens of test cases.
+In the arrange step of a test, we often need to create objects to be used in the test. The process of creating such objects may involve many steps or require a lot of information that is irrelevant to the test. Creation methods encapsulate the logic for creating objects for use in test cases. Creation methods allow test cases to supply only the information relevant to the test case and provide defaults for all other values required to create an object. Creation methods can be reused by many test cases. If changes are made to the SUT which affect how an object is constructed, then only a handful of creation methods need to be updated rather than many dozens of test cases.
 
 For instance, in our example, we might define the following creation methods for creating runner and race objects in test cases:
 
