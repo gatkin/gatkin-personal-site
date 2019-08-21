@@ -1,6 +1,6 @@
 ---
 title: About
-subtitle: ''
+subtitle: Greg Atkin
 layout: page
 menu:
   main:
