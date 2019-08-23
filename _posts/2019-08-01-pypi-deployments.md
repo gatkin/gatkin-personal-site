@@ -5,7 +5,7 @@ subtitle: ''
 date: 2019-08-03 06:00:00 +0000
 thumb_img_path: ''
 content_img_path: ''
-excerpt: I have found a setup for automating the process of releasing to PyPI using Azure Pipelines that makes publishing a package to PyPI as simple as creating a new git tag.
+excerpt: Making releasing to PyPI as simple as creating a new git tag.
 
 ---
 
