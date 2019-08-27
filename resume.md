@@ -42,7 +42,7 @@ Olathe, KS
 - Built internal Python tools to automate development tasks.
 - Lead developer responsible for designing, building, and delivering the over-the-air software updates feature that allows users to easily download and install software updates for their on-vessel Marine devices using their mobile phone.
 - Implemented a delivery pipeline to reliably assemble and publish update packages for Marine devices. This automated much of what had previously been a manual, laborious, and error-prone process.
-- Focused strongly on test automation from unit testing embedded C, to building automated testing infrastructure for the wide range of integrated, networked devices in the Marine ecosystem. Led workshops and gave presentations on unit testing practices in C to the other developers on my team.
+- Strong advocate of test automation from unit testing embedded C, to building automated testing infrastructure for the wide range of integrated, networked devices in the Marine ecosystem. Led workshops and gave presentations on unit testing practices in C to the other developers on my team.
 
 <br />
 
@@ -76,7 +76,7 @@ Kansas City, MO
 
 **Professional experience** in
 
-- C, C#, Python, C++
+- C, C#, Python, Lua, C++
 - SQLite, SQL Server, PostgreSQL, Redis
 - RabbitMQ, Docker
 - Git, Gerrit, GitLab, Jira

@@ -27,7 +27,7 @@ The initial approach to writing SQLite management code may often be to mix all o
 
 Consider a very simple (and contrived) example application where we wish to keep track of running race results. A race may have many runners and a runner may participate in many races. We can represent races and runners in their own respective tables and represent a runner's result in a race as a row in a separate join table. We might organize our tables to look like this
 
-![](/images/RacesDataModel.svg)
+![](/images/structuring-sqlite-code-in-c/RacesDataModel.svg)
 
 Suppose we need to implement a function to add a new race result. This function will receive a reference to a race and a runner as well as the time it took the runner to complete the race. For both the runner and the race, our function must create a new record in the runners and races tables, respectively, and use the newly inserted row ids in the record for the race result if the runner or the race do not already exist. Otherwise, the function can just use the existing row ids for the runner and race records.
 
@@ -75,15 +75,15 @@ These three areas of concerns nicely produce three distinct layers for SQLite ma
    - Sole access point to the database for all other components in the application.
    - Typically only one interface for the database.
 
-![](/images/LayerDiagram.svg)
+![](/images/structuring-sqlite-code-in-c/LayerDiagram.svg)
 
 Usually, I like to have one accessor per table in the database, possibly multiple controllers if the data is complex enough, and a single interface. The source dependency graph for a somewhat complex dataset with multiple controllers may look something like
 
-![](/images/DependencyDiagram.svg)
+![](/images/structuring-sqlite-code-in-c/DependencyDiagram.svg)
 
 For a dataset as simple as the example races dataset, a single controller to contain all the business logic will likely be all that is needed. If the dataset were to grow more complex, then we could very easily refactor to multiple controllers if needed
 
-![](/images/RacesDependencyDiagram.svg)
+![](/images/structuring-sqlite-code-in-c/RacesDependencyDiagram.svg)
 
 ### Accessor Layer
 

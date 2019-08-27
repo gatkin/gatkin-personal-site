@@ -33,7 +33,7 @@ To the outside world, we want our module to expose a high-level interface that e
 
 This singe source file mixes all of the concerns it must manage together. From a high-level, this singe source file looks like a jumble of multiple concerns.
 
-![](/images/Conglomeration.svg)
+![](/images/organizing-c-code/Conglomeration.svg)
 
 Although this approach may seem like the most straightforward initially, intermixing all the module's concerns together introduces many challenges.
 
@@ -47,7 +47,7 @@ Although this approach may seem like the most straightforward initially, intermi
 
 The key principle that I have found most useful to structuring the C modules I write is to recognize that these concerns the module must manage should be split apart and treated separately. Furthermore, there is a strict dependency hierarchy among the different concerns that should be respected to ensure that the core essence of the module does not depend on specific lower level implementation details that are somewhat incidental to the core responsibilities of the module. Ideally, I like to structure modules using the following general organization
 
-![](/images/SplitConcerns.svg)
+![](/images/organizing-c-code/SplitConcerns.svg)
 
 The most essential concern of any module, which has implications for the entire module, are the **type definitions**. Therefore, at the lowest-level core of the module, I usually place the type definitions, and, since this is C, this also includes all low-level functions necessary for working with types--initialization, destruction, equality comparisons, string representations, list manipulation, etc.--as needed by the module. I often use a separate header and source file for the type definitions and associated type functions.
 
@@ -64,7 +64,7 @@ Because the top layer deals with concerns such as state and side effects, it is 
 
 This organization is essentially just applying the dependency inversion principle and the [clean architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) described by Bob Martin to C module design. Indeed, if we draw the module diagram using circles instead of boxes and arrows, we can see that it really is just a manifestation of the clean architecture.
 
-![](/images/CleanArchitecture.svg)
+![](/images/organizing-c-code/CleanArchitecture.svg)
 
 ## Refactoring the Device Manager Module
 
