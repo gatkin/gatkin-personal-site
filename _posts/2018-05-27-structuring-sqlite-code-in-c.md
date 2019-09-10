@@ -5,9 +5,7 @@ subtitle: '2018-05-27'
 date: 2018-05-27 05:00:00 +0000
 thumb_img_path: ''
 content_img_path: ''
-excerpt: In this post, I describe an approach to structuring C SQLite access code
-  that I have found a very useful to producing code that is easy to understand, maintain,
-  and test.
+excerpt: Structuring C SQLite access code to be easy to understand, maintain, and test.
 
 ---
 

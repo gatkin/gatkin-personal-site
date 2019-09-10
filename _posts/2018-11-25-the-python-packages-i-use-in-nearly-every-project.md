@@ -5,9 +5,7 @@ subtitle: ''
 date: 2018-11-25 06:00:00 +0000
 thumb_img_path: ''
 content_img_path: ''
-excerpt: There are a handful of Python packages that I have found to be very useful
-  in the Python projects I have worked on which I expect to be useful to a significant
-  portion of Python projects in general
+excerpt: My go-to Python packages
 
 ---
 There are a handful of Python packages that I have found to be very useful in the Python projects I have worked on which I expect to be useful to a significant portion of Python projects in general. These projects cover a few common development concerns faced by many Python projects such as testing, static analysis, dependency management, and utility libraries.
